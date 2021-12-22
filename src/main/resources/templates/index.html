@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>크롤링 테스트</title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+</head>
+<body>
+
+    <main>
+        <div class="main">
+	        <div>
+	            <h3>[ 입력 ]</h3>
+	        </div>
+	        <div>
+		        <label for="url">URL</label>
+		        <input type="text" placeholder="http://www.wemakeprice.com" id="url" class="text-box" />
+	        </div>
+	        <div>
+	         	<label for="type">Type</label>
+	            <select id="type" class="text-box" >
+	                <option value="HTML_IGNORE" selected>HTML 태그 제외</option>
+	                <option value="TEXT_ALL">Text 전체</option>
+	            </select>
+	        </div>
+	        <div>
+	            <label for="bundle">출력 단위 묶음</label>
+	            <input type="number" min="0" max="99999999" placeholder="0이상 99999999이하" id="bundle" class="text-box"/>
+	        </div>
+	        <div>
+	            <button id="print" class="text-box">출 력</button>
+	        </div>
+	        <br>
+	        <div>
+	            <h3>[ 출력 ]</h3>
+	        </div>
+	        <div>
+	            몫 : <span id="quotient"></span>
+	        </div>
+	        <div>
+	            나머지 : <span id="remainder"></span>
+	        </div>
+        </div>
+    </main>
+    
+    <style>
+    	div {
+    		margin: 10px;
+    	}
+    	
+    	span {
+    		word-break: break-all;
+    	}
+    	
+    	.main {
+    		border: 1px solid;
+    		width: 300px;
+    		padding: 15px 30px;
+    	}
+    	
+    	.text-box {
+    		float: right;
+    	}
+    	
+    	#url {
+    		width: 230px;
+    	}
+    	
+    	#type {
+    		width: 236px;
+    	}
+    	
+    	#bundle {
+    		width: 150px;
+    	}
+    </style>
+
+    <script src="../static/js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+	  
+    <script type="text/javascript">
+	    (function($) {
+            // 출력 단위 묶음 숫자 9자리까지만 입력
+            $(document).on('input', '#bundle', function () {
+            	const val = $(this).val().replace(/[^0-9+]/g, '');
+            	
+                if (val.length > 9) {
+                    $(this).val(val.slice(0, 9));
+                    return false;
+                }
+                
+                $(this).val(Number(val));
+            });
+            
+	    	// 출력 버튼 클릭
+            $('#print').click(function () {
+            	const url = $('#url');
+            	const type = $('#type');
+            	const bundle = $('#bundle');
+            	
+            	if (!url.val()) {
+            		alert('URL을 입력해주세요.');
+            		url.focus();
+            		return false;
+            	}
+
+            	const regex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+            	if (!regex.test(url.val())) {
+            		alert('올바른 URL을 입력해주세요.');
+            		url.focus();
+            		return false;
+            	}
+                
+                if (!bundle.val()) {
+                    alert('출력 단위 묶음을 입력해주세요.');
+                	bundle.focus();
+                    return false;
+                }
+                
+                const data = {
+					url: url.val(),
+				    type: type.val(),
+				    bundle: Number(bundle.val())
+				}
+
+	            $.ajax({
+	                type: 'post',
+	                url: '/api/v1/crawling/print',
+	                contentType : 'application/json',
+	                data: JSON.stringify(data),
+	                success: function (data, status, xhr) {
+	                    if (xhr.status >= 200 && xhr.status < 300) {
+	                        $('#quotient').text(data.quotient);
+	                        $('#remainder').text(data.remainder);
+	                        
+	                    } else {
+                            $('#quotient').empty();
+                            $('#remainder').empty();
+	                    }
+	                },
+	                error: function (xhr, status, errorThrown) {
+	                	const error = JSON.parse(xhr.responseText);
+                        alert(error.message);
+                        $('#quotient').empty();
+                        $('#remainder').empty();
+	                }
+	            });
+            });
+		})(jQuery);
+    </script>
+
+</body>
+</html>
