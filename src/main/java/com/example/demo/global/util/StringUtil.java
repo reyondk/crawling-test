@@ -1,8 +1,10 @@
 package com.example.demo.global.util;
 
-import lombok.NoArgsConstructor;
+import lombok.experimental.UtilityClass;
 
-@NoArgsConstructor
+import java.util.Objects;
+
+@UtilityClass
 public class StringUtil {
 	
 	/**
@@ -11,8 +13,8 @@ public class StringUtil {
 	 * @param str
 	 * @return
 	 */
-	public static String regexAlphabet(String str) {
-		if (str == null) {
+	public String regexAlphabet(String str) {
+		if (Objects.isNull(str)) {
 			return "";
 		}
 		
@@ -26,8 +28,8 @@ public class StringUtil {
 	 * @param str
 	 * @return
 	 */
-	public static String regexNumber(String str) {
-		if (str == null) {
+	public String regexNumber(String str) {
+		if (Objects.isNull(str)) {
 			return "";
 		}
 		
@@ -41,8 +43,8 @@ public class StringUtil {
 	 * @param str
 	 * @return
 	 */
-	public static String regexAlphabetAndNumberAndWhitespace(String str) {
-		if (str == null) {
+	public String regexAlphabetAndNumberAndWhitespace(String str) {
+		if (Objects.isNull(str)) {
 			return "";
 		}
 		
@@ -57,7 +59,7 @@ public class StringUtil {
 	 * @param bundle
 	 * @return
 	 */
-	public static String quotient(String str, long bundle) {
+	public String quotient(String str, long bundle) {
 		if (bundle < 1) {
 			return str;
 		}
@@ -75,7 +77,7 @@ public class StringUtil {
 	 * @param bundle
 	 * @return
 	 */
-	public static String remainder(String str, long bundle) {
+	public String remainder(String str, long bundle) {
 		if (bundle < 1) {
 			return str;
 		}

@@ -1,10 +1,10 @@
 package com.example.demo.global.util;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.List;
 
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
+@UtilityClass
 public class ListUtil {
 	
 	/**
@@ -14,7 +14,7 @@ public class ListUtil {
 	 * @param list2
 	 * @return
 	 */
-	public static String mixListsToString(List<String> list1, List<String> list2) {
+	public String mixListsToString(List<String> list1, List<String> list2) {
 		int size1 = list1 == null ? 0 : list1.size();
 		int size2 = list2 == null ? 0 : list2.size();
 		int minSize = Math.min(size1, size2);

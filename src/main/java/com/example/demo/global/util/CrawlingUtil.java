@@ -1,16 +1,14 @@
 package com.example.demo.global.util;
 
+import com.example.demo.global.code.CrawlingType;
+import com.example.demo.global.exception.UrlNotFoundException;
+import lombok.experimental.UtilityClass;
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import com.example.demo.global.code.CrawlingType;
-import com.example.demo.global.exception.UrlNotFoundException;
-
-import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-
 @Slf4j
-@NoArgsConstructor
+@UtilityClass
 public class CrawlingUtil {
 	
 	/**
@@ -20,7 +18,7 @@ public class CrawlingUtil {
 	 * @param url
 	 * @return
 	 */
-	public static String crawling(CrawlingType type, String url) {
+	public String crawling(CrawlingType type, String url) {
 		try {
 			Document doc = Jsoup.connect(url).get();
 			String ans = type.isHtmlIgnore() ? doc.text() : doc.html();	
