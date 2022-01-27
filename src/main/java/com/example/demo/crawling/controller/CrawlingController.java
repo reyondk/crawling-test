@@ -1,7 +1,13 @@
 package com.example.demo.crawling.controller;
 
-import javax.validation.Valid;
-
+import com.example.demo.crawling.dto.request.PrintRequest;
+import com.example.demo.crawling.dto.response.PrintResponse;
+import com.example.demo.crawling.service.CrawlingService;
+import com.example.demo.global.dto.ErrorResponse;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,15 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.crawling.dto.request.PrintRequest;
-import com.example.demo.crawling.dto.response.PrintResponse;
-import com.example.demo.crawling.service.CrawlingService;
-import com.example.demo.global.dto.ErrorResponse;
-
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
-import lombok.RequiredArgsConstructor;
+import javax.validation.Valid;
 
 @RestController
 @RequiredArgsConstructor
