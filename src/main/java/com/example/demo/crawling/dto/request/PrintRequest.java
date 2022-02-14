@@ -6,12 +6,11 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import com.example.demo.crawling.code.CrawlingType;
+import com.example.demo.crawling.dto.CrawlingRequest;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.hibernate.validator.constraints.URL;
-
-import com.example.demo.crawling.dto.CrawlingRequest;
-import com.example.demo.global.code.CrawlingType;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

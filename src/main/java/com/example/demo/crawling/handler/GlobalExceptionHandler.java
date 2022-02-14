@@ -1,7 +1,10 @@
-package com.example.demo.global.handler;
+package com.example.demo.crawling.handler;
 
 import javax.validation.ConstraintViolationException;
 
+import com.example.demo.crawling.code.ErrorCode;
+import com.example.demo.crawling.dto.ErrorResponse;
+import com.example.demo.crawling.exception.BusinessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
@@ -9,10 +12,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-
-import com.example.demo.global.code.ErrorCode;
-import com.example.demo.global.dto.ErrorResponse;
-import com.example.demo.global.exception.BusinessException;
 
 import lombok.extern.slf4j.Slf4j;
 

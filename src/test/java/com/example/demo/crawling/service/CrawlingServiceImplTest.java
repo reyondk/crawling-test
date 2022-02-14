@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.demo.crawling.dto.request.PrintRequest;
 import com.example.demo.crawling.dto.response.PrintResponse;
-import com.example.demo.global.code.CrawlingType;
+import com.example.demo.crawling.code.CrawlingType;
 
 @SpringBootTest
 class CrawlingServiceImplTest {

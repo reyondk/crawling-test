@@ -1,10 +1,11 @@
-package com.example.demo.global.util;
+package com.example.demo.crawling.util;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.example.demo.crawling.util.CrawlingUtil;
 import org.junit.jupiter.api.Test;
 
-import com.example.demo.global.code.CrawlingType;
+import com.example.demo.crawling.code.CrawlingType;
 
 class CrawlingUtilTest {
 

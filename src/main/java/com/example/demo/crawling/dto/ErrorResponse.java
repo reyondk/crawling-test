@@ -1,4 +1,4 @@
-package com.example.demo.global.dto;
+package com.example.demo.crawling.dto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +6,11 @@ import java.util.stream.Collectors;
 
 import javax.validation.ConstraintViolationException;
 
+import com.example.demo.crawling.code.ErrorCode;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-
-import com.example.demo.global.code.ErrorCode;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

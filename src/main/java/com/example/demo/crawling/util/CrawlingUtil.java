@@ -1,7 +1,7 @@
-package com.example.demo.global.util;
+package com.example.demo.crawling.util;
 
-import com.example.demo.global.code.CrawlingType;
-import com.example.demo.global.exception.UrlNotFoundException;
+import com.example.demo.crawling.code.CrawlingType;
+import com.example.demo.crawling.exception.UrlNotFoundException;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;

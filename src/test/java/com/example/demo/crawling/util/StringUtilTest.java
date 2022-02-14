@@ -1,7 +1,8 @@
-package com.example.demo.global.util;
+package com.example.demo.crawling.util;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.example.demo.crawling.util.StringUtil;
 import org.junit.jupiter.api.Test;
 
 class StringUtilTest {

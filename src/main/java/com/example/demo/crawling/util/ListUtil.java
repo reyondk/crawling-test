@@ -1,4 +1,4 @@
-package com.example.demo.global.util;
+package com.example.demo.crawling.util;
 
 import lombok.experimental.UtilityClass;
 

@@ -2,10 +2,9 @@ package com.example.demo.crawling.dto.response;
 
 import java.io.Serializable;
 
+import com.example.demo.crawling.dto.CrawlingResponse;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-
-import com.example.demo.crawling.dto.CrawlingResponse;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
-package com.example.demo.global.service;
+package com.example.demo.crawling.service;
 
-import com.example.demo.global.dto.ApiRequest;
-import com.example.demo.global.exception.ParamNotFoundException;
+import com.example.demo.crawling.dto.ApiRequest;
+import com.example.demo.crawling.exception.ParamNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

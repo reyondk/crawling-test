@@ -14,8 +14,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.example.demo.crawling.dto.request.PrintRequest;
-import com.example.demo.global.code.CrawlingType;
-import com.example.demo.global.handler.GlobalExceptionHandler;
+import com.example.demo.crawling.code.CrawlingType;
+import com.example.demo.crawling.handler.GlobalExceptionHandler;
 
 import lombok.extern.slf4j.Slf4j;
 

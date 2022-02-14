@@ -1,9 +1,9 @@
 package com.example.demo.crawling.controller;
 
+import com.example.demo.crawling.dto.ErrorResponse;
 import com.example.demo.crawling.dto.request.PrintRequest;
 import com.example.demo.crawling.dto.response.PrintResponse;
 import com.example.demo.crawling.service.CrawlingService;
-import com.example.demo.global.dto.ErrorResponse;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;

@@ -1,10 +1,11 @@
-package com.example.demo.global.util;
+package com.example.demo.crawling.util;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.demo.crawling.util.ListUtil;
 import org.junit.jupiter.api.Test;
 
 class ListUtilTest {

@@ -1,12 +1,11 @@
 package com.example.demo.crawling.service;
 
-import com.example.demo.crawling.dto.request.PrintRequest;
 import com.example.demo.crawling.dto.response.PrintResponse;
-import com.example.demo.global.exception.UrlNotFoundException;
-import com.example.demo.global.service.ValidService;
-import com.example.demo.global.util.CrawlingUtil;
-import com.example.demo.global.util.ListUtil;
-import com.example.demo.global.util.StringUtil;
+import com.example.demo.crawling.dto.request.PrintRequest;
+import com.example.demo.crawling.exception.UrlNotFoundException;
+import com.example.demo.crawling.util.CrawlingUtil;
+import com.example.demo.crawling.util.ListUtil;
+import com.example.demo.crawling.util.StringUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

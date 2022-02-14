@@ -1,4 +1,4 @@
-package com.example.demo.global.dto;
+package com.example.demo.crawling.dto;
 
 public interface ApiResponse {
 	

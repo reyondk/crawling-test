@@ -1,4 +1,4 @@
-package com.example.demo.global.code;
+package com.example.demo.crawling.code;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 
