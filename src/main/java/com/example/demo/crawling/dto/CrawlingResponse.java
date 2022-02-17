@@ -1,5 +1,7 @@
 package com.example.demo.crawling.dto;
 
-public interface CrawlingResponse extends ApiResponse {
+public interface CrawlingResponse {
+
+    String toString();
 	
 }

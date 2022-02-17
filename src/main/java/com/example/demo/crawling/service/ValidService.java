@@ -1,6 +1,6 @@
 package com.example.demo.crawling.service;
 
-import com.example.demo.crawling.dto.ApiRequest;
+import com.example.demo.crawling.dto.CrawlingRequest;
 import com.example.demo.crawling.exception.ParamNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,12 +23,12 @@ public class ValidService {
 	 * 유효성 체크
 	 * @param request
 	 */
-	public void valid(ApiRequest request) {
+	public void valid(CrawlingRequest request) {
 		if (request == null) {
 			throw new ParamNotFoundException();
 		}
 		
-		Set<ConstraintViolation<ApiRequest>> violations = validator.validate(request);
+		Set<ConstraintViolation<CrawlingRequest>> violations = validator.validate(request);
 		
 		if (!violations.isEmpty()) {
 			log.error("violations : {}", violations);

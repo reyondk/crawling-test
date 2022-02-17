@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class ErrorResponse implements ApiResponse {
+public class ErrorResponse {
 
 	@ApiModelProperty(notes = "HTTP 상태코드")
 	private int status;
